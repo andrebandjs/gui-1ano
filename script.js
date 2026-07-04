@@ -180,7 +180,7 @@ function renderGuests() {
         </div>
 
         <div class="category-field">
-          <span class="category-label" id="category-label-${guest.id}">Perfil</span>
+          <span class="category-label" id="category-label-${guest.id}">Idade</span>
           <div class="category-options" role="radiogroup" aria-labelledby="category-label-${guest.id}">
             ${CATEGORY_OPTIONS.map((option) => `
               <label class="category-option">
@@ -274,9 +274,9 @@ function validateGuests() {
     }
 
     if (!categoryInput) {
-      errors.push("Informe o perfil de todos os convidados.");
+      errors.push("Informe a idade de todos os convidados.");
       block.querySelector(".category-options").setAttribute("aria-invalid", "true");
-      document.querySelector(`#error-category-${CSS.escape(guest.id)}`).textContent = "Perfil obrigatório.";
+      document.querySelector(`#error-category-${CSS.escape(guest.id)}`).textContent = "Idade obrigatória.";
     }
   });
 

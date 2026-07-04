@@ -75,7 +75,7 @@ function renderGuests() {
         </div>
 
         <div class="category-field">
-          <span class="category-label" id="generator-category-label-${guest.id}">Perfil</span>
+          <span class="category-label" id="generator-category-label-${guest.id}">Idade</span>
           <div class="category-options" role="radiogroup" aria-labelledby="generator-category-label-${guest.id}">
             ${CATEGORY_OPTIONS.map((option) => `
               <label class="category-option">

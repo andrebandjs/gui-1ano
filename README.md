@@ -83,7 +83,7 @@ Sempre que alterar o código do Apps Script, crie uma nova versão/implantação
 ## Testar envio
 
 1. Abra `index.html` em um navegador ou rode um servidor local simples.
-2. Preencha nome, perfil e presença.
+2. Preencha nome, idade e presença.
 3. Clique em `Enviar Confirmação`.
 4. Após o envio, a página redireciona para `obrigado.html`.
 5. Confira se uma linha foi adicionada na aba `Respostas`.
@@ -105,7 +105,7 @@ O frontend envia este payload:
 }
 ```
 
-O campo `age` continua existindo para manter compatibilidade com a coluna `Idade` da planilha, mas agora recebe o texto do perfil: `Adulto`, `Adolescente` ou `Criança/Bebê`.
+O campo `age` recebe o texto da idade selecionada: `Adulto`, `Adolescente` ou `Criança/Bebê`.
 
 ## Links personalizados
 
@@ -117,9 +117,9 @@ Exemplo simples:
 index.html?convidados=Gabriel+Pinto&Isabelle+Pinto
 ```
 
-Sem perfil explícito, os convidados entram como `Adulto`.
+Sem idade explícita, os convidados entram como `Adulto`.
 
-Para definir o perfil de cada convidado, coloque a categoria depois do nome usando `|`:
+Para definir a idade de cada convidado, coloque a categoria depois do nome usando `|`:
 
 ```text
 index.html?convidados=Gabriel+Pinto|adulto&Isabelle+Pinto|crianca
