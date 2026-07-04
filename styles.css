@@ -648,6 +648,7 @@ a {
   border-radius: 0;
   padding: 8px 12px;
   background: #d6b06f;
+  background-image: linear-gradient(rgb(229, 194, 143) 50%, rgb(206, 175, 129) 50%);
   box-shadow: none;
   color: var(--ink);
   font-size: clamp(16px, 4.4vw, 20px);
@@ -838,8 +839,6 @@ a {
   background: linear-gradient(180deg, #8eb73a 0 50%, #73992d 50% 100%);
 }
 
-.add-guest:hover,
-.remove-guest:hover,
 .audio-toggle:hover {
   background: #e8c481;
 }
