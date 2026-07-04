@@ -59,6 +59,8 @@ Se precisar recriar:
 Timestamp | Nome | Idade | Status | Origem
 ```
 
+O `Timestamp` é gravado pelo Apps Script em formato legível no fuso `America/Bahia`: `dd/MM/yyyy HH:mm:ss`.
+
 ## Publicar o Apps Script
 
 1. Na planilha, vá em `Extensões > Apps Script`.

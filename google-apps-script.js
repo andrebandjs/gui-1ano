@@ -1,4 +1,6 @@
 const SPREADSHEET_ID = "18r48bY5YF7JHnwZ3ez5vS88WkObS9kWDdHcNTDjCLCI";
+const TIME_ZONE = "America/Bahia";
+const DATE_FORMAT = "dd/MM/yyyy HH:mm:ss";
 
 function doGet(e) {
   const callback = e.parameter.callback;
@@ -23,7 +25,7 @@ function doPost(e) {
   const sheet = SpreadsheetApp.openById(SPREADSHEET_ID).getSheetByName("Respostas");
   const data = JSON.parse(e.postData.contents);
 
-  const submittedAt = data.submittedAt || new Date().toISOString();
+  const submittedAt = formatSubmittedAt(data.submittedAt);
   const guests = data.guests || [];
   const source = data.source || "convite-guilherme-1-ano";
 
@@ -46,4 +48,14 @@ function doPost(e) {
   return ContentService
     .createTextOutput(JSON.stringify({ ok: true }))
     .setMimeType(ContentService.MimeType.JSON);
+}
+
+function formatSubmittedAt(value) {
+  const date = value ? new Date(value) : new Date();
+
+  if (isNaN(date.getTime())) {
+    return Utilities.formatDate(new Date(), TIME_ZONE, DATE_FORMAT);
+  }
+
+  return Utilities.formatDate(date, TIME_ZONE, DATE_FORMAT);
 }
