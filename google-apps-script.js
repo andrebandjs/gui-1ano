@@ -1,5 +1,24 @@
 const SPREADSHEET_ID = "18r48bY5YF7JHnwZ3ez5vS88WkObS9kWDdHcNTDjCLCI";
 
+function doGet(e) {
+  const callback = e.parameter.callback;
+  const response = {
+    ok: true,
+    source: "convite-guilherme-1-ano",
+    spreadsheetId: SPREADSHEET_ID
+  };
+
+  if (callback) {
+    return ContentService
+      .createTextOutput(callback + "(" + JSON.stringify(response) + ");")
+      .setMimeType(ContentService.MimeType.JAVASCRIPT);
+  }
+
+  return ContentService
+    .createTextOutput(JSON.stringify(response))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+
 function doPost(e) {
   const sheet = SpreadsheetApp.openById(SPREADSHEET_ID).getSheetByName("Respostas");
   const data = JSON.parse(e.postData.contents);

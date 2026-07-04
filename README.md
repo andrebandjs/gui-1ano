@@ -76,6 +76,8 @@ Ao publicar como Web App, use:
 - `Executar como`: você mesmo.
 - `Quem pode acessar`: qualquer pessoa com o link.
 
+Sempre que alterar o código do Apps Script, crie uma nova versão/implantação ou edite a implantação existente e selecione a versão mais recente. O frontend valida a URL antes do envio usando o `doGet` do Apps Script; uma URL inválida ou não pública exibirá erro na interface em vez de redirecionar para a página de obrigado.
+
 ## Testar envio
 
 1. Abra `index.html` em um navegador ou rode um servidor local simples.

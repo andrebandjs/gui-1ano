@@ -1,4 +1,4 @@
-const GOOGLE_SCRIPT_URL = "COLE_A_URL_DO_WEB_APP_AQUI";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyT5H1KLde3ELVyMiIgbcYrev1a-YCtQRpBIVZrhUCXupPc1CzR_8td78Pn7ugKIdHNbg/exec";
 const PARTY_ADDRESS = "Rua do Areal, 145 | Camaçari - BA";
 const SOURCE = "convite-guilherme-1-ano";
 const DEFAULT_CATEGORY = "adulto";
@@ -298,6 +298,43 @@ function buildPayload() {
   };
 }
 
+function checkGoogleScriptUrl() {
+  return new Promise((resolve, reject) => {
+    const callbackName = `conviteHealth_${Date.now()}_${Math.random().toString(16).slice(2)}`;
+    const separator = GOOGLE_SCRIPT_URL.includes("?") ? "&" : "?";
+    const script = document.createElement("script");
+    const timer = setTimeout(() => {
+      cleanup();
+      reject(new Error("Tempo esgotado ao validar o Apps Script."));
+    }, 7000);
+
+    function cleanup() {
+      clearTimeout(timer);
+      script.remove();
+      delete window[callbackName];
+    }
+
+    window[callbackName] = (response) => {
+      cleanup();
+
+      if (response && response.ok) {
+        resolve(response);
+        return;
+      }
+
+      reject(new Error(response?.error || "Apps Script indisponível."));
+    };
+
+    script.onerror = () => {
+      cleanup();
+      reject(new Error("URL do Apps Script inválida ou sem acesso público."));
+    };
+
+    script.src = `${GOOGLE_SCRIPT_URL}${separator}health=1&callback=${encodeURIComponent(callbackName)}`;
+    document.body.appendChild(script);
+  });
+}
+
 guestList.addEventListener("input", (event) => {
   const block = event.target.closest(".guest-block");
   if (!block) return;
@@ -409,6 +446,7 @@ form.addEventListener("submit", async (event) => {
 
   try {
     const payload = buildPayload();
+    await checkGoogleScriptUrl();
 
     await fetch(GOOGLE_SCRIPT_URL, {
       method: "POST",
@@ -421,8 +459,8 @@ form.addEventListener("submit", async (event) => {
 
     sessionStorage.setItem("conviteGuilhermeLastGuests", JSON.stringify(payload.guests));
     window.location.href = "obrigado.html";
-  } catch {
-    setMessage("Não foi possível enviar agora. Tente novamente em instantes.", "error");
+  } catch (error) {
+    setMessage(error.message || "Não foi possível enviar agora. Tente novamente em instantes.", "error");
   } finally {
     submitButton.disabled = false;
     submitButton.setAttribute("aria-busy", "false");
