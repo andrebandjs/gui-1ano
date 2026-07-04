@@ -251,7 +251,7 @@ a {
 .party-info {
   display: grid;
   width: 100%;
-  grid-template-columns: 117px minmax(0, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 8px;
 }
 
@@ -284,11 +284,19 @@ a {
   width: 22px;
 }
 
+.time-icon {
+  width: 28px;
+}
+
 .info-box p {
   margin: 8px 0 0;
   color: var(--ink);
   font-size: clamp(14px, 4vw, 20px);
   line-height: 1.2;
+}
+
+.location-box {
+  grid-column: 1 / -1;
 }
 
 .location-box .info-heading span:first-of-type {
@@ -977,10 +985,6 @@ a {
     font-size: clamp(22px, 6vw, 25px);
   }
 
-  .party-info {
-    grid-template-columns: 1fr;
-  }
-
   .title-art {
     aspect-ratio: 2172 / 724;
     width: min(92%, 292px);
@@ -993,14 +997,16 @@ a {
     object-fit: contain;
   }
 
-  .date-box {
+  .date-box,
+  .time-box {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
     gap: 8px;
   }
 
-  .date-box p {
+  .date-box p,
+  .time-box p {
     margin: 0;
     text-align: right;
   }
