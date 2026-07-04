@@ -32,6 +32,10 @@ body {
   color: var(--ink);
   font-family: var(--font-pixel);
   background: #5c3515 url("assets/images/bg-tile.png") top left / 627px 627px repeat;
+  background: #5c3515 image-set(
+    url("assets/images/bg-tile.webp") type("image/webp"),
+    url("assets/images/bg-tile.png") type("image/png")
+  ) top left / 627px 627px repeat;
   -webkit-font-smoothing: none;
   font-smooth: never;
 }
@@ -77,6 +81,10 @@ a {
   max-height: 55svh;
   transform: translateX(-50%);
   background: url("assets/images/bg-top.png") bottom center / cover no-repeat;
+  background: image-set(
+    url("assets/images/bg-top.webp") type("image/webp"),
+    url("assets/images/bg-top.png") type("image/png")
+  ) bottom center / cover no-repeat;
   image-rendering: pixelated;
   pointer-events: none;
 }
@@ -168,6 +176,11 @@ a {
   height: 136.16%;
   max-width: none;
   image-rendering: pixelated;
+}
+
+.family-art picture,
+.title-art picture {
+  display: contents;
 }
 
 .invite-frame {
