@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Convite Guilherme - 1 ano</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="page">
+      <div class="sky-scene" aria-hidden="true"></div>
+
+      <main class="experience" aria-labelledby="invite-title">
+        <button class="audio-toggle" type="button" id="audioToggle" aria-pressed="false">
+          <span aria-hidden="true">♪</span>
+          <span id="audioLabel">Tocar música</span>
+        </button>
+        <audio id="backgroundAudio" src="assets/audio/background.mp3" loop preload="auto" autoplay></audio>
+        <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+        <section class="card-stage" aria-label="Convite de aniversário">
+          <div class="family-art" aria-hidden="true">
+            <img src="assets/images/family-top.png" alt="" />
+          </div>
+
+          <article class="invite-frame">
+            <div class="paper">
+              <h1 id="invite-title" class="sr-only">Convite de aniversário de 1 ano do Guilherme</h1>
+
+              <div class="title-art" aria-hidden="true">
+                <img src="assets/images/title-guilherme.png" alt="" />
+              </div>
+
+              <p class="intro">
+                Você está convidado para<br />
+                comemorar com a gente!
+              </p>
+
+              <section class="party-info" aria-label="Informações da festa">
+                <div class="info-box date-box">
+                  <div class="info-heading">
+                    <img class="info-icon" src="assets/images/icon-calendar.svg" alt="" aria-hidden="true" />
+                    <span>Data</span>
+                  </div>
+                  <p>08/08/2026</p>
+                </div>
+
+                <div class="info-box location-box">
+                  <div class="info-heading">
+                    <img class="info-icon location-icon" src="assets/images/icon-location.svg" alt="" aria-hidden="true" />
+                    <span>Local</span>
+                    <button class="copy-button" type="button" id="copyAddress">Copiar Endereço</button>
+                  </div>
+                  <p id="partyAddress">Rua do Areal, 145 <span>|</span> Camaçari - BA</p>
+                </div>
+              </section>
+
+              <div class="ornament" aria-hidden="true">
+                <img src="assets/images/divider-line.svg" alt="" />
+                <img class="heart" src="assets/images/heart.svg" alt="" />
+                <img src="assets/images/divider-line.svg" alt="" />
+              </div>
+
+              <form class="rsvp-form" id="rsvpForm" novalidate>
+                <div class="form-title">
+                  <img src="assets/images/icon-pencil.svg" alt="" aria-hidden="true" />
+                  <h2>Confirme sua Presença</h2>
+                </div>
+
+                <fieldset class="status-field reservation-status">
+                  <legend>Status da reserva</legend>
+                  <div class="status-row" role="radiogroup" aria-label="Status de presença da reserva">
+                    <label class="status-option">
+                      <input type="radio" name="reservation-status" value="confirmado" checked />
+                      <span class="status-art" aria-hidden="true">
+                        <img class="status-box" src="assets/images/checkbox-yes.svg" alt="" />
+                        <img class="status-mark check" src="assets/images/check-mark.svg" alt="" />
+                      </span>
+                      <span>Eu vou</span>
+                    </label>
+                    <label class="status-option">
+                      <input type="radio" name="reservation-status" value="nao_vou" />
+                      <span class="status-art" aria-hidden="true">
+                        <img class="status-box" src="assets/images/checkbox-no.svg" alt="" />
+                        <img class="status-mark close" src="assets/images/close-mark.svg" alt="" />
+                      </span>
+                      <span>Não vou</span>
+                    </label>
+                  </div>
+                  <div class="field-error" id="reservationStatusError" aria-live="polite"></div>
+                </fieldset>
+
+                <div class="guest-list" id="guestList"></div>
+
+                <button class="add-guest" type="button" id="addGuest">
+                  <img src="assets/images/icon-add-guests.svg" alt="" aria-hidden="true" />
+                  <span>+ Adicionar Convidado</span>
+                </button>
+
+                <div class="form-message" id="formMessage" aria-live="polite"></div>
+
+                <div class="submit-lines" aria-hidden="true">
+                  <img src="assets/images/divider-line-wide.svg" alt="" />
+                  <img src="assets/images/divider-line-wide.svg" alt="" />
+                </div>
+
+                <button class="submit-button" type="submit" id="submitButton">
+                  <span id="submitLabel">Enviar Confirmação</span>
+                  <img src="assets/images/submit-check.svg" alt="" aria-hidden="true" />
+                </button>
+              </form>
+            </div>
+          </article>
+        </section>
+
+        <footer class="footer">
+          Aniversário de 1 ano do Guilherme Mello Bandarra - Todos direitos reservados ® 2026
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>

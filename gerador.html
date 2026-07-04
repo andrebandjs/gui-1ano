@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador de convites - Guilherme</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="generator.js" defer></script>
+  </head>
+  <body>
+    <div class="page">
+      <div class="sky-scene" aria-hidden="true"></div>
+
+      <main class="experience tool-experience" aria-labelledby="generator-title">
+        <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+        <section class="tool-stage" aria-label="Gerador de convites">
+          <article class="invite-frame">
+            <div class="paper tool-paper">
+              <div class="title-art" aria-hidden="true">
+                <img src="assets/images/title-guilherme.png" alt="" />
+              </div>
+
+              <div class="form-title">
+                <img src="assets/images/icon-pencil.svg" alt="" aria-hidden="true" />
+                <h1 id="generator-title">Gerador de Convites</h1>
+              </div>
+
+              <form class="generator-form" id="generatorForm" novalidate>
+                <div class="generator-list" id="generatorList"></div>
+
+                <button class="add-guest" type="button" id="addGeneratorGuest">
+                  <img src="assets/images/icon-add-guests.svg" alt="" aria-hidden="true" />
+                  <span>+ Adicionar Convidado</span>
+                </button>
+
+                <div class="form-message" id="generatorMessage" aria-live="polite"></div>
+
+                <div class="submit-lines" aria-hidden="true">
+                  <img src="assets/images/divider-line-wide.svg" alt="" />
+                  <img src="assets/images/divider-line-wide.svg" alt="" />
+                </div>
+
+                <button class="submit-button" type="submit">
+                  <span>Gerar Link</span>
+                  <img src="assets/images/submit-check.svg" alt="" aria-hidden="true" />
+                </button>
+              </form>
+
+              <section class="generated-link" id="generatedLinkPanel" aria-label="Link gerado" hidden>
+                <label for="generatedLink">Link de compartilhamento</label>
+                <textarea id="generatedLink" readonly rows="4"></textarea>
+                <div class="generator-actions">
+                  <button class="copy-button copy-link-button" type="button" id="copyGeneratedLink">Copiar Link</button>
+                  <a class="visit-link" id="openGeneratedLink" href="index.html">Abrir Convite</a>
+                </div>
+              </section>
+            </div>
+          </article>
+        </section>
+
+        <footer class="footer">
+          Aniversário de 1 ano do Guilherme Mello Bandarra - Todos direitos reservados ® 2026
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>

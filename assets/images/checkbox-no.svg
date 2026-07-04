@@ -1,0 +1,43 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Checkbox">
+<g id="Union">
+<path d="M4.57143 32H2.28571V29.7143H4.57143V32Z" fill="var(--fill-0, #533006)"/>
+<path d="M29.7143 32H27.4286V29.7143H29.7143V32Z" fill="var(--fill-0, #533006)"/>
+<path d="M2.28571 29.7143H0V27.4286H2.28571V29.7143Z" fill="var(--fill-0, #533006)"/>
+<path d="M32 29.7143H29.7143V27.4286H32V29.7143Z" fill="var(--fill-0, #533006)"/>
+<path d="M2.28571 4.57143H0V2.28571H2.28571V4.57143Z" fill="var(--fill-0, #533006)"/>
+<path d="M32 4.57143H29.7143V2.28571H32V4.57143Z" fill="var(--fill-0, #533006)"/>
+<path d="M4.57143 2.28571H2.28571V0H4.57143V2.28571Z" fill="var(--fill-0, #533006)"/>
+<path d="M29.7143 2.28571H27.4286V0H29.7143V2.28571Z" fill="var(--fill-0, #533006)"/>
+</g>
+<g id="Union_2">
+<path d="M27.4286 29.7143H4.57143V27.4286H27.4286V29.7143Z" fill="var(--fill-0, #F2A641)"/>
+<path d="M4.57143 27.4286H2.28571V4.57143H4.57143V27.4286Z" fill="var(--fill-0, #F2A641)"/>
+<path d="M29.7143 27.4286H27.4286V4.57143H29.7143V27.4286Z" fill="var(--fill-0, #F2A641)"/>
+<path d="M27.4286 4.57143H4.57143V2.28571H27.4286V4.57143Z" fill="var(--fill-0, #F2A641)"/>
+</g>
+<g id="Union_3">
+<path d="M6.85714 27.4286H4.57143V25.1429H6.85714V27.4286Z" fill="var(--fill-0, #C8833A)"/>
+<path d="M27.4286 27.4286H25.1429V25.1429H27.4286V27.4286Z" fill="var(--fill-0, #C8833A)"/>
+<path d="M6.85714 6.85714H4.57143V4.57143H6.85714V6.85714Z" fill="var(--fill-0, #C8833A)"/>
+<path d="M27.4286 6.85714H25.1429V4.57143H27.4286V6.85714Z" fill="var(--fill-0, #C8833A)"/>
+</g>
+<g id="Union_4">
+<path d="M25.1429 27.4286H6.85714V25.1429H25.1429V27.4286Z" fill="var(--fill-0, #A17446)"/>
+<path d="M6.85714 25.1429H4.57143V6.85714H6.85714V25.1429Z" fill="var(--fill-0, #A17446)"/>
+<path d="M27.4286 25.1429H25.1429V6.85714H27.4286V25.1429Z" fill="var(--fill-0, #A17446)"/>
+<path d="M25.1429 6.85714H6.85714V4.57143H25.1429V6.85714Z" fill="var(--fill-0, #A17446)"/>
+</g>
+<g id="Union_5">
+<path d="M27.4286 32H4.57143V29.7143H27.4286V32Z" fill="var(--fill-0, #733508)"/>
+<path d="M4.57143 29.7143H2.28571V27.4286H4.57143V29.7143Z" fill="var(--fill-0, #733508)"/>
+<path d="M29.7143 29.7143H27.4286V27.4286H29.7143V29.7143Z" fill="var(--fill-0, #733508)"/>
+<path d="M2.28571 27.4286H0V4.57143H2.28571V27.4286Z" fill="var(--fill-0, #733508)"/>
+<path d="M32 27.4286H29.7143V4.57143H32V27.4286Z" fill="var(--fill-0, #733508)"/>
+<path d="M4.57143 4.57143H2.28571V2.28571H4.57143V4.57143Z" fill="var(--fill-0, #733508)"/>
+<path d="M29.7143 4.57143H27.4286V2.28571H29.7143V4.57143Z" fill="var(--fill-0, #733508)"/>
+<path d="M27.4286 2.28571H4.57143V0H27.4286V2.28571Z" fill="var(--fill-0, #733508)"/>
+</g>
+<rect id="Rectangle 127" x="6.85714" y="6.85714" width="18.2857" height="18.2857" fill="var(--fill-0, #FCE3AB)"/>
+</g>
+</svg>
