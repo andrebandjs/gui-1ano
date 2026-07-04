@@ -944,11 +944,11 @@ a {
   }
 
   .info-heading {
-    font-size: clamp(17px, 4.8vw, 21px);
+    font-size: clamp(16px, 4.5vw, 20px);
   }
 
   .info-box p {
-    font-size: clamp(16px, 4.4vw, 21px);
+    font-size: clamp(15px, 4.1vw, 20px);
   }
 
   .form-title h2 {
@@ -999,16 +999,30 @@ a {
 
   .date-box,
   .time-box {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    gap: 8px;
+    padding: 7px 6px;
   }
 
   .date-box p,
   .time-box p {
-    margin: 0;
-    text-align: right;
+    margin-top: 6px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .date-box .info-heading,
+  .time-box .info-heading {
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .date-box .info-icon,
+  .time-box .info-icon {
+    width: 24px;
+    height: 26px;
+  }
+
+  .time-box p {
+    font-size: clamp(13px, 3.5vw, 16px);
   }
 
   .status-row {
