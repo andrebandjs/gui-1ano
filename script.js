@@ -1,4 +1,4 @@
-const GOOGLE_SCRIPT_URL = "COLE_A_URL_DO_WEB_APP_AQUI";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyT5H1KLde3ELVyMiIgbcYrev1a-YCtQRpBIVZrhUCXupPc1CzR_8td78Pn7ugKIdHNbg/exec";
 const PARTY_ADDRESS = "Rua do Areal, 145 | Camaçari - BA";
 const SOURCE = "convite-guilherme-1-ano";
 const DEFAULT_CATEGORY = "adulto";
