@@ -56,10 +56,10 @@ Se precisar recriar:
 3. Na primeira linha, adicione as colunas:
 
 ```text
-Timestamp | Nome | Idade | Status | Origem
+Data/Hora | Nome | Idade | Status | Origem
 ```
 
-O `Timestamp` é gravado pelo Apps Script em formato legível no fuso `America/Bahia`: `dd/MM/yyyy HH:mm:ss`.
+O campo `Data/Hora` é gravado pelo Apps Script em formato legível no fuso `America/Bahia`: `dd/MM/yyyy HH:mm:ss`.
 
 ## Publicar o Apps Script
 
