@@ -29,6 +29,14 @@ Use `image-rendering: pixelated;` para assets pixel art, como já está configur
 
 ## Google Sheets
 
+A planilha configurada para este projeto é:
+
+```text
+https://docs.google.com/spreadsheets/d/18r48bY5YF7JHnwZ3ez5vS88WkObS9kWDdHcNTDjCLCI/edit
+```
+
+O arquivo `google-apps-script.js` já está configurado com este `SPREADSHEET_ID`.
+
 No arquivo `script.js`, substitua:
 
 ```js
@@ -38,6 +46,10 @@ const GOOGLE_SCRIPT_URL = "COLE_A_URL_DO_WEB_APP_AQUI";
 pela URL do Web App publicado no Google Apps Script.
 
 ## Criar a planilha
+
+A planilha atual já foi preparada com a aba `Respostas`.
+
+Se precisar recriar:
 
 1. Crie uma planilha no Google Sheets.
 2. Crie uma aba chamada exatamente `Respostas`.
@@ -58,6 +70,11 @@ Timestamp | Nome | Idade | Status | Origem
 7. Em `Quem pode acessar`, selecione a opção adequada para receber respostas.
 8. Publique e copie a URL do Web App.
 9. Cole essa URL em `GOOGLE_SCRIPT_URL` no `script.js`.
+
+Ao publicar como Web App, use:
+
+- `Executar como`: você mesmo.
+- `Quem pode acessar`: qualquer pessoa com o link.
 
 ## Testar envio
 
