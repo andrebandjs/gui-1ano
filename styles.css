@@ -68,14 +68,15 @@ a {
 }
 
 .sky-scene {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 50%;
   z-index: 0;
   width: 1672px;
   height: 702px;
+  max-height: 55svh;
   transform: translateX(-50%);
-  background: url("assets/images/bg-top.png") top center / cover no-repeat;
+  background: url("assets/images/bg-top.png") bottom center / cover no-repeat;
   image-rendering: pixelated;
   pointer-events: none;
 }
@@ -850,6 +851,32 @@ a {
   line-height: 1.2;
   text-align: center;
   text-shadow: 2px 2px 0 rgba(92, 53, 21, 0.9);
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer p + p {
+  margin-top: 8px;
+}
+
+.footer small {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.72em;
+  line-height: 1.15;
+}
+
+.footer a {
+  color: #ffe3a7;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.footer a:hover {
+  color: #fff2c8;
 }
 
 .sr-only {
